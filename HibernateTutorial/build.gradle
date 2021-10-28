@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.java.hibernate.tutorial'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.6.0.Final'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.27'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
